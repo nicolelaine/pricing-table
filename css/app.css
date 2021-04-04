@@ -1,0 +1,126 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: rgb(147, 13, 173);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/*the container that holds the divs*/
+.panel {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 25px;
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*the divs that hold the images*/
+.pricing-plan {
+        border-bottom: 1px solid #e1f1ff;
+    }
+
+/*to remove the bottom border onthe div in mobile first*/
+.pricing-plan:last-child {
+        border-bottom: none;
+    }
+
+/*the images*/  
+.pricing-img {
+        margin-bottom: 25px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+/*the names of the plans*/
+.pricing-header {
+    color: #888888; 
+    font-weight: 600;
+    letter-spacing: 1px;
+    }
+
+/*the container that holds the list items*/
+.pricing-features {
+    list-style: none;
+    margin: 50px 0 25px;
+    color: #6019ff;
+}
+
+/*the list items*/
+.pricing-features-item {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 15px 0;
+    border-top: 1px solid #e1f1ff;
+}
+
+/*to add in a bottom border on the list items in mobile first*/
+.pricing-features-item:last-child {
+    border-bottom: 1px solid #e1f1ff;
+}
+
+/*where it says free, 150, 400 prices*/
+.pricing-price {
+    color: #6019ff;
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/*the button with "sign up" in it*/
+.pricing-button {
+    border: 1px solid #a523f0;
+    border-radius: 10px;
+    color: #5c18f0;
+    display: inline-block;
+    padding: 15px 35px;
+    text-decoration: none;
+    margin: 25px 0;
+    transition: background-color 200ms ease-in-out;
+}
+
+/*how to make the button change color on hover*/
+.pricing-button:hover, .pricing-button:focus {
+    background-color: rgb(147, 13, 173);
+    color: white;
+}
+
+.pricing-button.is-featured {
+    background-color: rgb(147, 13, 173);
+    color: white;
+}
+
+.pricing-button.is-featured:hover, .pricing-button.is-featured:focus {
+    background-color: rgb(179, 7, 93);
+    color: white;
+} 
+
+
+/*to make the site look nice on tablets and desktop*/
+@media (min-width: 900px) {
+    .panel {
+        flex-direction: row;
+    }
+    .pricing-plan {
+        border-bottom: none;
+        border-right: 1px solid #e1f1ff;
+        padding: 25px 50px;
+    }
+    .pricing-plan:last-child {
+        border-right: none;
+    }
+    .pricing-button {
+        border: 2px solid #a523f0;
+    }
+}   
